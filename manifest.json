@@ -1,0 +1,23 @@
+
+{
+  "name": "Coupon",
+  "description": "Discount Coupon",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+  "storage",
+  "activeTab"
+],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/discount 16x16.png",
+      "32": "/images/discount 32x32.png"
+      
+    }
+  }
+
+}
+
+

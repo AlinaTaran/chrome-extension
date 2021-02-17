@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+/* HOME PAGE */
+.title__wrapper {
+  text-align: center;
+  border-bottom: 1px solid rgb(204, 202, 202);
+  width: 100%;
+}
+
+.main__title {
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+.coupon__list {
+  padding: 20px 0;
+  width: 280px;
+  height: 280px;
+  overflow-y: scroll;
+}
+
+.coupon__list_item {
+  margin: 0 auto;
+  box-shadow: 0px 0px 1px 1px rgba(107, 107, 107, 0.21);
+  width: 240px;
+}
+
+.coupon__list_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.coupon {
+  padding: 3px 5px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+  outline: none;
+}
+
+.coupon:hover,
+.coupon:focus {
+  color: rgb(202, 36, 105);
+  border: 1px solid rgb(202, 36, 105);
+}
+.coupon__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.coupon__copy-text {
+  display: none;
+  margin-right: 6px;
+  color: rgb(202, 36, 105);
+  animation-name: text;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.coupon__description {
+  padding: 0 0 10px 10px;
+}
+
+/* STORES PAGE*/
+
+.coupon__list_item-stores {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.coupon__img {
+  width: 37px;
+  height: 37px;
+}
+
+/* NAVIGATION BTN */
+
+.menu-icon {
+  width: 22px;
+  height: 22px;
+  fill: gray;
+}
+
+.menu-icon.is-active-icon {
+  fill: rgb(202, 36, 105);
+}
+.menu-icon:hover,
+.menu-icon:focus {
+  fill: rgb(202, 36, 105);
+}
+
+.home__btn,
+.stores__btn,
+.add-coupon__btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* TABS */
+
+.tabs {
+  width: 280px;
+}
+.tab {
+  display: none;
+}
+
+.tab.is-active {
+  display: block;
+}
+
+.tabs__content {
+  position: relative;
+}
+.tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slide-left 0.2s;
+}
+
+.tabs__nav_item {
+  cursor: pointer;
+}
+
+.tabs__nav {
+  position: absolute;
+  top: 340px;
+  left: 0;
+  border-top: 1px solid rgb(204, 202, 202);
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ADD PAGE */
+
+.wrapper__add {
+  padding: 105px 0;
+}
+
+.new-coupons {
+  display: block;
+}
+
+.add__description {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.new-coupons {
+  padding: 10px 16px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: rgb(202, 36, 105);
+  color: white;
+  font-weight: 600;
+}
